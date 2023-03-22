@@ -27,6 +27,12 @@ th, td {
 	padding: 5px;
 }
 
+/* Fieldsets */
+fieldset {
+	border: solid 1px var(--text-color);
+}
+
+/* Classes */
 .align-left {
 	text-align: left;
 }
