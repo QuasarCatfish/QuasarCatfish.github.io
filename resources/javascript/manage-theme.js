@@ -13,7 +13,7 @@ function setTheme(theme) {
 		if (curTheme.rel !== "stylesheet") continue;
 
 		if (typeof theme === "number") {
-			curTheme.href = themes[theme % index.length];
+			curTheme.href = themes[theme % themes.length];
 		} else {
 			curTheme.href = theme;
 		}
@@ -30,7 +30,7 @@ function changeTheme() {
 		let index = themes.indexOf(curTheme.href);
 		if (index === -1) continue;
 
-		curTheme.href = themes[(index + 1) % index.length];
+		curTheme.href = themes[(index + 1) % themes.length];
 		break;
 	}
 }
