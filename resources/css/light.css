@@ -17,6 +17,9 @@ table, th, td {
 	margin-right: auto;
 	text-align: center;
 	border: solid 1px var(--text-color);
+}
+
+table {
 	display: inline-block;
 }
 
