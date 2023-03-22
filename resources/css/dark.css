@@ -1,7 +1,33 @@
 @charset "UTF-8";
 
+:root {
+	--text-color: #FFF;
+	--back-color: #000;
+}
+
 /* Font and Background */
 body {
-	color: #FFF;
-	background-color: #000;
+	color: var(--text-color);
+	background-color: var(--back-color);
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border: solid 3px var(--text-color);
+}
+
+th {
+	padding: 5px;
+	border: solid 3px var(--text-color);
+}
+
+td {
+	padding: 5px;
+	border: solid 3px var(--text-color);
+}
+
+.align-left {
+	text-align: left;
 }
