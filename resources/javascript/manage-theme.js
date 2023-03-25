@@ -7,6 +7,15 @@ window.addEventListener("DOMContentLoaded", event => {
 	setTheme(0);
 });
 
+function indexOfTheme(theme) {
+	for (let index in themes) {
+		if (theme.substring(theme.lastIndexOf("/")) == themes[index].substring(themes[index].lastIndexOf("/"))) {
+			return index;
+		}
+	}
+	return -1;
+}
+
 function setTheme(theme) {
 	let links = document.getElementsByTagName("link");
 	for (let curTheme of links) {
@@ -27,10 +36,10 @@ function changeTheme() {
 	for (let curTheme of links) {
 		if (curTheme.rel !== "stylesheet") continue;
 
-		let index = themes.indexOf(curTheme.href);
+		let index = indexOfTheme(curTheme.href);
 		if (index === -1) continue;
 
-		curTheme.href = themes[(index + 1) % themes.length];
+		curTheme.href = themes[(parseInt(index) + 1) % themes.length];
 		break;
 	}
 }
