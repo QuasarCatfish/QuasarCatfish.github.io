@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Recreated Yu-Gi-Oh! Rush Duels within Minecraft.">
+        <meta name="author" content="Quas">
+
+		<!-- Page info -->
+		<title>Minecraft Rush Duel</title>
+
+		<!-- CSS and JS -->
+		<link type="text/css" rel="stylesheet" href="/resources/css/dark.css">
+		<script type="text/javascript" src="/resources/javascript/manage-theme.js"></script>
+	</head>
+
+	<body>
+		<h1>Minecraft Rush Duel Mod</h1>
+		<hr>
+
+		<!-- Overview -->
+		<h2 id="overview">Overview</h2>
+		<p>
+			This project aims to create a functional 1.19.4 Minecraft mod that adds Yu-Gi-Oh! Rush Duels to the game.
+			This mod will primarily focus on multiplayer content, as this will allow players to duel against one another.
+		</p>
+		<p>
+			I hope that this mod will be Survival friendly, meaning players can obtain most items without the need for cheats or commands.
+			Some developer items or incomplete items may be locked behind Creative mode or commands, however.
+		</p>
+		<hr>
+		
+		<!-- Dev Journal -->
+		<h2 id="journal">Developer Journal</h2>
+		<h3>Week 0</h3>
+		<h4>May 15 to May 21</h4>
+		<p>
+			This week has been focused on creating the proposal for this project and setting up this page.
+			<a href="/projects/minecraft-rush-duel#tasks">A list of the project's tasks can be found here</a>.
+			While the tasks are divided into "Minimum Viable Product" and "Stretch Goals", I intend to implement several stretch goal features within the project.
+			This only serves as a defensive measure in case the required tasks take longer than expected to implement.
+		</p>
+		<p>
+			Below is the preliminary weekly schedule for this project.
+			I intend for many tasks to shift around depending on how long other tasks take to complete, the complexity of some tasks after more research is done, and unexpected developments.
+			During each of my weekly updates, I intend to have a refined weekly task list as well as updates on what was and was not completed the previous week.
+		</p>
+		<p>
+			The <a href="/projects/minecraft-rush-duel#journal">Developer Journal</a> section on the main page will serve to host the most recent weekly update on the project while
+			<a href="/projects/minecraft-rush-duel/journal">this page</a> will serve to host daily updates as well as all previous weekly updates.
+		</p>
+
+		<h3>Preliminary Schedule</h3>
+		<table>
+			<tr>
+				<th>Week</th>
+				<th>Tasks</th>
+			</tr>
+			<tr>
+				<td><b>Week 0</b><br>May 15 to May 21</td>
+				<td class="align-left">
+					<ul>
+						<li>Create a project proposal for a Minecraft Rush Duel mod.</li>
+						<li>Conduct preliminary research into Minecraft Modding and Yu-Gi-Oh! Rush Duels.</li>
+						<li>Create the <a href="/projects/minecraft-rush-duel/">project page</a> and <a href="/projects/minecraft-rush-duel/journal">journal page</a> for this project.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Week 1</b><br>May 22 to May 28</td>
+				<td class="align-left">
+					<ul>
+						<li>
+							Create mod project
+							<ul>
+								<li>Minecraft 1.19.4</li>
+								<li>Forge 45.0.64 or latest</li>
+							</ul>
+						</li>
+						<li>
+							Create Velgearium
+							<ul>
+								<li>
+									Velgearium Ore
+									<ul>
+										<li>Drops Raw Velgearium when mined, affected by Fortune</li>
+										<li>Drops Velgearium Ore when mined with Silk Touch</li>
+										<li>Smelts into Velgearium Ingot</li>
+									</ul>
+								</li>
+								<li>
+									Deepslate Velgearium Ore
+									<ul>
+										<li>Drops Raw Velgearium when mined, affected by Fortune</li>
+										<li>Drops Velgearium Ore when mined with Silk Touch</li>
+										<li>Smelts into Velgearium Ingot</li>
+									</ul>
+								</li>
+								<li>
+									Raw Velgearium
+									<ul>
+										<li>Smelts into Velgearium Ingot</li>
+										<li>9x Craft into Block of Raw Velgearium</li>
+									</ul>
+								</li>
+								<li>
+									Block of Raw Velgearium
+									<ul>
+										<li>Crafts into 9x Raw Velgearium</li>
+									</ul>
+								</li>
+								<li>
+									Velgearium Ingot
+									<ul>
+										<li>9x Craft into Block of Velgearium</li>
+									</ul>
+								</li>
+								<li>
+									Block of Velgearium
+									<ul>
+										<li>Crafts into 9x Velgearium Ingot</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							Create an empty card item with different textures based on the card's NBT
+							<ul>
+								<li>Normal Monster</li>
+								<li>Effect Monster</li>
+								<li>Fusion Monster</li>
+								<li>Spell Card</li>
+								<li>Trap Card</li>
+							</ul>
+						</li>
+						<li>
+							Create Creative mode tabs
+							<ul>
+								<li>Rush Duel</li>
+								<li>Rush Duel - Cards</li>
+								<li>Rush Duel - Card Packs</li>
+							</ul>
+						</li>
+						<li>Research lang files and implement the naming convention</li>
+						<li>Research <a href="https://www.curseforge.com/minecraft/mc-mods/jei">JEI</a> integration</li>
+						<li>Research <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli">Patchouli</a> integration</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Week 2</b><br>May 29 to June 4</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 3</b><br>June 5 to June 11</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 4</b><br>June 12 to June 18</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 5</b><br>June 19 to June 25</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 6</b><br>June 26 to July 2</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 7</b><br>July 3 to July 9</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 8</b><br>July 10 to July 16</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 9</b><br>July 17 to July 23</td>
+				<td class="align-left">TBD</td>
+			</tr>
+			<tr>
+				<td><b>Week 10</b><br>July 24 to July 30</td>
+				<td class="align-left">TBD</td>
+			</tr>
+		</table>
+		<hr>
+
+		<!-- Tasks -->
+		<h2 id="tasks">Tasks and Features</h2>
+
+		<h3 id="mvp">Minimum Viable Product</h3>
+		
+		<!-- Stretch Goals -->
+		<h3 id="stretch">Stretch Goals</h3>
+
+		<hr>
+
+		<!-- Rush Duel Overview -->
+		<h2 id="rushduel">Yu-Gi-Oh! Rush Duel</h2>
+		<p>
+			Yu-Gi-Oh! Rush Duel is version of the Yu-Gi-Oh! card game that is designed to be a simplified version of the Official Card Game and Trading Card Game.
+			Two anime series, <i>Yu-Gi-Oh! SEVENS</i> and <i>Yu-Gi-Oh! GO RUSH!!</i>, showcase Rush Duels as the exclusive way to duel within these shows.
+			Currently, the phsyical version of Rush Duels is exclusive to Japan and Korea, but the <i>Yu-Gi-Oh! SEVENS</i> anime has aired internationally.
+		</p>
+
+		<!-- Rush Duel Rules -->
+		<h3 id="rushduel-rules">Rush Duel Rules</h3>
+
+		<!-- Rush Duel Card Types -->
+		<fieldset>
+			<legend>Card Types</legend>
+			<p>
+				In Rush Duels, there are three types of cards: Monsters, Spells, and Traps.
+			</p>
+
+			<h4>Monster Cards</h4>
+			<p>
+				Monsters come in four varieties: Normal Monsters, Effect Monsters, Maximum Monsters, and Fusion Monsters.
+				Fusion Monsters are placed in the Extra deck and all other Monster cards are placed in the Main deck.
+			</p>
+			<p>
+				All monsters have an Attribute, Type, Level, ATK, and DEF. In addition, Maximum Monsters have a Maximum ATK.
+			</p>
+
+			<h4>Spell Cards</h4>
+			<p>
+				Spell cards come in three varities: Normal Spells, Field Spells, and Equip Spells.
+				Spell cards can only be activated on your own turn.
+			</p>
+			<p>
+				Normal Spells apply their effect then get sent to the GY.
+				Field Spells remain on the field (in the Field Zone) and their effect is applied as long as they remain on the field.
+				Equip Spells are equipped to a monster, applying their effect to the equipped monster, and their effect is applied as long as they and the monster they are equipepd to remains on the field.
+			</p>
+
+			<h4>Trap Cards</h4>
+			<p>
+				Trap cards come in one variety: Normal Traps.
+				Trap cards can be set during your turn, but activated on either players turn, starting on the turn after they are set.
+			</p>
+		</fieldset>
+		<br>
+
+		<!-- Rush Duel Field -->
+		<fieldset>
+			<legend>Duel Field</legend>
+			<p>
+				Each player has their own field on which to place their cards, with different sections.
+			</p>
+			<ul>
+				<li>Monster Zones</li>
+				<li>Spell/Trap Zones</li>
+				<li>Field Zone</li>
+				<li>Extra Deck Zone</li>
+				<li>Graveyard</li>
+				<li>Main Deck Zone</li>
+			</ul>
+		</fieldset>
+		<br>
+
+		<!-- Rush Duel Deck -->
+		<fieldset>
+			<legend>Deck Restrictions</legend>
+			<h4>Main Deck</h4>
+			<p>Consists of 40 to 60 cards. Includes Non-Fusion Monsters, Spells, and Traps.</p>
+			<h4>Extra Deck</h4>
+			<p>Consists of 0 to 15 cards. Includes Fusion Monsters only.</p>
+			<h4>Side Deck (optional)</h4>
+			<p>Consists of 0 to 15 cards. Includes any type of card. This is used to swap cards between games in a match.</p>
+			<h4>Copy Count</h4>
+			<p>You can include a maximum of three cards with the same name in your deck.</p>
+			<h4>Legend Rule</h4>
+			<p>You can include a maximum of one Legend Monster card, one Legend Spell card, and one Legend Trap card in your Main deck. Your Side deck can contain any number of Legend cards.</p>
+		</fieldset>
+
+		<hr>
+	</body>
+</html>
