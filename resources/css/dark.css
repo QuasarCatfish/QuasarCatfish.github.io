@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 :root {
-	--text-color: #FFF;
-	--back-color: #000;
+	--text-color: white;
+	--back-color: black;
 }
 
 /* Font and Background */
@@ -10,6 +10,19 @@ body {
 	color: var(--text-color);
 	background-color: var(--back-color);
 }
+
+a:link, a:hover {
+	color: deepskyblue;
+}
+
+a:visited {
+	color : plum;
+}
+
+a:active {
+	color: tomato;
+}
+
 
 /* Tables */
 table, th, td {
