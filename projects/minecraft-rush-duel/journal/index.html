@@ -44,17 +44,32 @@
 				<tr>
 					<td>External Data Storage</td>
 					<td>Completed</td>
-					<td>5 hours</td>
+					<td>3 hours</td>
+				</tr>
+				<tr>
+					<td>Updating Card Item</td>
+					<td>Completed</td>
+					<td>2 hours</td>
+				</tr>
+				<tr>
+					<td>Starter Deck Item</td>
+					<td>Completed</td>
+					<td>4 hours</td>
 				</tr>
 				<tr>
 					<td>Card Pack Item</td>
-					<td>Not Started</td>
-					<td></td>
+					<td>Not Yet Started</td>
+					<td>1 hour</td>
+				</tr>
+				<tr>
+					<td>Adding Card Data</td>
+					<td>Completed</td>
+					<td>3 hours</td>
 				</tr>
 				<tr>
 					<td>Journal Update</td>
 					<td></td>
-					<td></td>
+					<td>1 hour</td>
 				</tr>
 			</table>
 
@@ -70,9 +85,63 @@
 				I was referenced another person's mod that uses a DataManager class to retrieve information from JSONs.
 				From this, I could easily loop through all the files in the /data/cards/ folder and use GSON to create Card objects from the JSONs.
 			</p>
+
+			<h3>Updating Card Item</h3>
 			<p>
-				This system will also be used to load pack and starter deck information, which is a task I have yet to start this week.
+				Most of the work for this task this week was integrating the card's NBT data with the Data Manager to pull the correct card data as well as displaying the card data in the item's tooltip.
+				Since there are such a variety of cards (Normal Monsters, Effect Monsters, Spell/Trap Cards) with different formats (Effects, Continuous Effects, Multi-Choice Effects, Maixmum Monsters, Fusion Monsters), there are a lot of conditions in this one method to handle the formatting properly.
 			</p>
+
+			<h3>Starter Deck Item</h3>
+			<p>
+				I thought this would be relatively simple to implement since it was just creating a similar class to the Card class as well as reading in the external JSON data, but there were more issues at hand.
+				Most of the issues I faced when implementing starter decks was just small bugs: missing a key-value pair in the JSON, forgetting to update the lang file, null pointer exceptions by referencing an invalid card ID, and more.
+				I also needed to design the starter decks in such a way that they can give cards, other starter decks, and packs, which was just more casework and not too difficult.
+			</p>
+
+			<h3>Card Pack Item</h3>
+			<p>
+				Since card packs are relatively similar to starter decks, since they both give the player an assortment of cards, I thought this would be very easy to implement.
+				I just needed to take the previous code and modify it to give random cards of the entire set instead of a set list of cards.
+			</p>
+			<p>
+				The only issue with card packs currently is they don't match the pull rates of real Rush Duel booster packs, which I hope to update in the future.
+				The primary reason for this is that there is no good data on pull rates, so I might have to ask around in various Japanese/Korean circles to try and figure out this information.
+				Right now, the pack contains 4 commons and 1 non-common.
+			</p>
+
+			<h3>Adding Card Data</h3>
+			<p>
+				I added card data for all of the following cards:
+				<ul>
+					<li>The 14 unique cards in "Starter Deck Yuga - Cut Through! Sevens Road!!"</li>
+					<li>The 14 unique cards in "Starter Deck Luke - Explosive Supremacy! Dragias!!"</li>
+					<li>The 1 unique card in "Starter Deck Set - Yuga vs. Luke"</li>
+					<li>"Yggdrago the Sky Emperor", "Yggdrago the Sky Emperor [L]", and "Yggdrago the Sky Emperor [R]"</li>
+					<li>"Sevensgias the Magical Dragon Knight" and "Fusion"</li>
+				</ul>
+			</p>
+			<img src="/resources/images/card_details.png" alt="&quot;Twin Edge Dragon&quot; details" height="100">
+			<img src="/resources/images/card_details_2.png" alt="&quot;Yggdrago the Sky Emperor&quot; details" height="100">
+			<img src="/resources/images/card_details_3.png" alt="&quot;Fusion&quot; details" height="100">
+			<p>
+				Additionally, I added the following premade decks:
+				<ul>
+					<li>"Starter Deck Yuga - Cut Through! Sevens Road!!"</li>
+					<li>"Starter Deck Luke - Explosive Supremacy! Dragias!!"</li>
+					<li>"Starter Deck Set - Yuga vs. Luke" (contains "Sevens Road Witch" promo card and the previous two starter decks)</li>
+					<li>"Starter Deck Quasar - Developer Set" (custom deck containing "Yggdrago", "Sevensgias", and "Fusion")</li>
+				</ul>
+			</p>
+			<img src="/resources/images/starter_deck_details.png" alt="&quot;Starter Deck Yuga - Cut Through! Sevens Road!!&quot; details" height="100">
+			<p>
+				Lastly, I added a "developers" pack that contains cards preexisting cards but are not an official set.
+				This is to test the pack mechanic giving random cards without needing to add the data additional cards found in "Deck Mod Pack: Hyperspeed Rush Road!!"
+				It currently contains all existing cards at various rarities.
+			</p>
+			<img src="/resources/images/card_pack_details.png" alt="&quot;Deck Mod Pack: Developer Set&quot; details" height="100">
+			<img src="/resources/images/card_pack_details_2.png" alt="Using a card pack" height="200">
+			<img src="/resources/images/card_pack_details_3.png" alt="5 cards received from using a card pack" height="100">
 		</div>
 		<hr>
 
