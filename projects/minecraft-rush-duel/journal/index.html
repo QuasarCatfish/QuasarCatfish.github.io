@@ -19,6 +19,7 @@
 		<h1>Developer Journal</h1>
 		<p>
 			<a href="/projects/minecraft-rush-duel/">&lt;-- Back to Main Project Page</a>
+			<a href="https://github.com/QuasarCatfish/RushDuel-1.19.4">See this project on GitHub</a>
 		</p>
 
 		<!-- ToC -->
@@ -56,7 +57,9 @@
 				<li>
 					<a href="#week-3">Week 3</a> (June 5 to June 11)
 					<ul>
-						<!-- Week 3 tasks -->
+						<li>Duel Disk Models</li>
+						<li>Duel Disk Item</li>
+						<li>Code Cleanup</li>
 					</ul>
 				</li>
 			</ul>
@@ -74,21 +77,71 @@
 					<th>Time Taken</th>
 				</tr>
 				<tr>
-					<td><i>SEVENS</i> Duel Disk Item</td>
-					<td>Postponed</td>
+					<td><i>SEVENS</i> Duel Disk Model</td>
+					<td>Completed</td>
+					<td>1.5 hours</td>
+				</tr>
+				<tr>
+					<td><i>GO RUSH!!</i> Duel Disk Model</td>
+					<td>Not Started</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td><i>GO RUSH!!</i> Duel Disk Item</td>
-					<td>Postponed</td>
+					<td>Duel Disk Item</td>
+					<td>Not Started</td>
 					<td></td>
 				</tr>
 				<tr>
 					<td>JEI Card Information Integration</td>
-					<td>Not Started</td>
-					<td></td>
+					<td>In Progress</td>
+					<td>15 minutes</td>
+				</tr>
+				<tr>
+					<td>Code Cleanup</td>
+					<td>In Progress</td>
+					<td>30 minutes</td>
+				</tr>
+				<tr>
+					<td>Journal Update</td>
+					<td>In Progress</td>
+					<td>15 minutes</td>
 				</tr>
 			</table>
+
+			<h3>Duel Disk Models</h3>
+			<p>
+				Creating the model for the SEVENS style duel disk was not particularly difficult.
+				I have never used Blockbench before, so learning how to use enough of the features to create a simple model took some time.
+				The end result of the SEVENS style duel disk model was a decent enough quality for this point in the development cycle, but I want an improved model before publishing.
+				Creating the model wasn't even the entire process, I also had to ensure the placement of the item in various positions (main hand, offhand, item frame, on the ground, in the inventory) looked good.
+			</p>
+			<p>
+				I have not yet started on the GO RUSH style duel disk.
+			</p>
+
+			<h3>Duel Disk Item</h3>
+			<p>
+				For the duel disk item, I wanted it to open a dueling UI when a keybind is selected with the duel disk in your offhand.
+				This required learning how to add custom keybinds and perform an inventory check for the item in question.
+				I will probably change this in the future to include a "select opponent" screen where nearby players are listed to challenge to a duel.
+				Furthermore, there may be a "spectate" button to spectate another duelist's match.
+				<!-- TODO: Do and add more info -->
+			</p>
+
+			<h3>JEI Integration</h3>
+			<p>
+				The first requirement for this task is for separate card items to individually be listed in the JEI menu.
+				Currently, only one card item shows up in the list of items becasue they all share the same item ID and use NBT to distinguish which item is which.
+				Fixing this was a pretty simple implementation, by adding the list of items to subtype in the JEI registerItemSubtypes method.
+			</p>
+
+			<h3>Code Cleanup</h3>
+			<p>
+				Throughout developing this project so far, I have added new code wherever necessary to implement the various features of the mod.
+				However, this has left my codebase in somewhat of an "ugly" state where code isn't neatly organized.
+				One of the tasks this week was to work on organizing my existing code, as well as keeping my code organized in the future.
+				<!-- TODO: organize code -->
+			</p>
 		</div>
 
 		<!-- Week 2 -->
