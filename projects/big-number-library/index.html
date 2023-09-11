@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Creating a C++20 Library to facilitate storing larger than 64-bit numbers.">
+        <meta name="author" content="Quas">
+
+		<!-- Page info -->
+		<title>C++20 Big Number Library</title>
+
+		<!-- CSS and JS -->
+		<link type="text/css" rel="stylesheet" href="/resources/css/dark.css">
+		<script type="text/javascript" src="/resources/javascript/manage-theme.js"></script>
+	</head>
+
+	<body>
+		<h1>C++20 Big Number Library</h1>
+		<hr>
+
+		<!-- Overview -->
+		<h2 id="overview">Overview</h2>
+		<p>
+			This project aims to create a C++ Library for an efficient implementation of big numbers (larger than 64-bit).
+			There are three categories of number classes that I want to create for this project: arbitrary-precision, fixed-precision, and fast-big (class names TBD).
+			For the first two categories, both integer and floating-point classes will exist, while there will only exist floating-point numbers for fast-big.
+			As a stretch goal, I would also like to create a complex number class (that hinges on any of these previous classes for numerical storage) to further flesh out this library.
+		</p>
+		
+		<!-- Dev Journal -->
+		<h2 id="journal">Developer Journal</h2>
+		<p><a href="/projects/big-number-library/journal">Click here to look at my developer journal.</a></p>
+
+		<!-- GitHub Link -->
+		<h2 id="github">GitHub Link</h2>
+		<!-- <p><a href="https://github.com/QuasarCatfish/">See this project on GitHub.</a></p> -->
+		<p>This project will be hosted on GitHub in the future.</p>
+		<hr>
+
+		<!-- Tools and Resources -->
+		<h2 id="resources">Tools and Resources</h2>
+		<ul>
+			<li>vcpkg (C++ Dependancy Manager)</li>
+			<li>Visual Studio 2022</li>
+			<li>BigInteger and BigDecimal (Java)</li>
+			<li>GNU Multi-Precision Library (C++)</li>
+			<li>Boost Multiprecision Library (C++)</li>
+		</ul>
+		<hr>
+
+		<!-- Tasks -->
+		<h2 id="tasks">Tasks and Features</h2>
+
+		<h3 id="mvp">Minimum Viable Product</h3>
+		<ul>
+			<li>
+				Arbitrary-precision non-templated integer
+				<ul>
+					<li>Stores with absolute precision any integer number</li>
+					<li>All integral math operations can be performed on this number</li>
+					<li>Similar to Java's BigInteger</li>
+				</ul>
+			</li>
+			<li>
+				Arbitrary-precision non-templtaed floating-point
+				<ul>
+					<li>Stores with absolute precision (to a specified number of decimal places) any floating-point number</li>
+					<li>All real math operations can be performed on this number</li>
+					<li>Similar to Java's BigDecimal</li>
+				</ul>
+			</li>
+			<li>
+				Fixed-precision templated integer
+				<ul>
+					<li>Stores integer numbers up to a set number of bits (big_int&lt;32&gt; would mimic int)</li>
+				</ul>
+			</li>
+			<li>
+				Fixed-precision templated floating-point
+				<ul>
+					<li>Stores floating-point numbers up to a set number of bits (big_float&lt;32&gt; would mimic float)</li>
+				</ul>
+			</li>
+			<li>
+				"Big-fast" non-templated floating-point
+				<ul>
+					<li>Can store any floating-point number with variable precision</li>
+					<li>Aims to provide a fast but less precise version of the arbitrary-precision floating-point class</li>
+				</ul>
+			</li>
+			<li>
+				Integral and Real Math Function Libraries
+				<ul>
+					<li>A collection of math functions that can be applied to either integral or real numbers</li>
+					<li>Mimics standard library functions like std::sin and std::log</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<!-- Stretch Goals -->
+		<h3 id="stretch">Stretch Goals</h3>
+		<ul>
+			<li>Wrapper class to facilitate Complex Numbers</li>
+			<li>Complex Math Function Library</li>
+			<li>Integration with C++'s random engine and distributions</li>
+		</ul>
+	</body>
+</html>

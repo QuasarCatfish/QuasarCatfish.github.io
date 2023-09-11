@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="C++20 Big Number Library Developer Journal.">
+        <meta name="author" content="Quas">
+
+		<!-- Page info -->
+		<title>C++20 Big Number Library - Developer Journal</title>
+
+		<!-- CSS and JS -->
+		<link type="text/css" rel="stylesheet" href="/resources/css/dark.css">
+		<script type="text/javascript" src="/resources/javascript/manage-theme.js"></script>
+	</head>
+
+	<body>
+		<h1>Developer Journal</h1>
+		<p>
+			<a href="/projects/big-number-library/">&lt;-- Back to Main Project Page</a>
+			<!-- <a href="https://github.com/QuasarCatfish/RushDuel-1.19.4">See this project on GitHub</a> -->
+		</p>
+
+		<!-- ToC -->
+		<div id="contents">
+			<h3>Table of Contents</h3>
+			<ul>
+				<li>
+					<a href="#week-0">Week 0</a>
+					<ul>
+						<li>Project Description</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#week-1">Week 1</a>
+					<ul>
+						<li>Project Setup</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<hr>
+
+		<!-- Week 1 -->
+		<div id="week-1">
+			<h3>Week 1</h3>
+			<h4>September 11 to 17</h4>
+
+			<table>
+				<tr>
+					<th>Task</th>
+					<th>Status</th>
+					<th>Time Taken</th>
+				</tr>
+				<tr>
+					<td>Project Setup</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Research</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Journal Update</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+
+			<h4>Project Setup</h4>
+			<p>
+
+			</p>
+		</div>
+		<hr>
+
+		<!-- Week 0 -->
+		<div id="week-0">
+			<h3>Project Description</h3>
+			<p>
+				This project aims to create a C++ Library for an efficient implementation of big numbers (larger than 64-bit).
+				There are three categories of number classes that I want to create for this project: arbitrary-precision, fixed-precision, and fast-big (class names TBD).
+				For the first two categories, both integer and floating-point classes will exist, while there will only exist floating-point numbers for fast-big.
+				As a stretch goal, I would also like to create a complex number class (that hinges on any of these previous classes for numerical storage) to further flesh out this library.
+			</p>
+			<p>
+				Below is the preliminary weekly schedule for this project.
+				I intend for many tasks to shift around depending on how long other tasks take to complete, the complexity of some tasks after more research is done, and unexpected developments.
+				During each of my weekly updates, I intend to have a refined weekly task list as well as updates on what was and was not completed the previous week.
+			</p>
+	
+			<h3>Preliminary Schedule</h3>
+			<table>
+				<tr>
+					<th>Week</th>
+					<th>Tasks</th>
+				</tr>
+				<tr>
+					<td><b>Week 1</b><br>September 11 to 17</td>
+					<td class="align-left">
+						<ul>
+							<li>Project Setup</li>
+							<li>Basic integer class (replicate 32-bit integer)</li>
+							<li>Bsic floating-point class (replicate 32-bit float)</li>
+							<li>Unit tests for aforementioned classes</li>
+							<li>Preliminary math functions (sin, cos, tan, etc)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 2</b><br>September 18 to 24</td>
+					<td class="align-left">
+						<ul>
+							<li>Arbitrary-precision integer</li>
+							<li>Additional integer math functions</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 3</b><br>September 25 to October 1</td>
+					<td class="align-left">
+						<ul>
+							<li>Arbitrary-precision float</li>
+							<li>Additional float math functions</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 4</b><br>October 2 to 8</td>
+					<td class="align-left">
+						<ul>
+							<li>Additional unit tests for arbitrary-precision classes</li>
+							<li>Bug fixes</li>
+							<li>Export project as a lib or dll</li>
+							<li>Look into publishing to vcpkg</li>
+						</ul>
+						<p>This week is primarily a padding week to finalize the arbitrary-precision classes and to researching exporting this project as a portable library.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 5</b><br>October 9 to 15</td>
+					<td class="align-left">
+						<ul>
+							<li>Fixed-precision integer</li>
+							<li>Additional integer math functions</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 6</b><br>October 16 to 22</td>
+					<td class="align-left">
+						<ul>
+							<li>Fixed-precision float</li>
+							<li>Additional float math functions</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 7</b><br>October 23 to 29</td>
+					<td class="align-left">
+						<ul>
+							<li>Additional unit tests for fixed-precision classes</li>
+							<li>Bug fixes</li>
+							<li>Export project as a lib or dll</li>
+						</ul>
+						<p>This week is primarily a padding week to finalize the fixed-precision classes.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 8</b><br>October 30 to November 5</td>
+					<td class="align-left">
+						<ul>
+							<li>"Fast-Big" number class</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 9</b><br>November 6 to 12</td>
+					<td class="align-left">
+						<ul>
+							<li>Modularize "Fast-Big" class</li>
+							<li>Unit tests</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Week 10</b><br>November 13 to 19</td>
+					<td class="align-left">
+						<ul>
+							<li>Additional unit tests for "Fast-Big" class</li>
+							<li>Bug Fixes</li>
+							<li>Finalize and export project</li>
+							<li>Publish to vcpkg</li>
+						</ul>
+						<p>This week is primarily a padding week to finalize the "Fast-Big" class and to publish the final projecct on vcpkg.</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
