@@ -55,24 +55,71 @@
 				</tr>
 				<tr>
 					<td>Project Setup</td>
-					<td></td>
-					<td></td>
+					<td>Completed</td>
+					<td>2 hour</td>
+				</tr>
+				<tr>
+					<td>Basic Integer</td>
+					<td>Completed</td>
+					<td>2 hours</td>
+				</tr>
+				<tr>
+					<td>Basic Float</td>
+					<td>Completed</td>
+					<td>1 hour</td>
+				</tr>
+				<tr>
+					<td>Unit Tests</td>
+					<td>Completed</td>
+					<td>2 hours</td>
 				</tr>
 				<tr>
 					<td>Research</td>
-					<td></td>
-					<td></td>
+					<td>Completed</td>
+					<td>4 hours</td>
 				</tr>
 				<tr>
 					<td>Journal Update</td>
+					<td>Completed</td>
+					<td>1 hour</td>
+				</tr>
+				<tr>
+					<td><b>Total</b></td>
 					<td></td>
-					<td></td>
+					<td>12 hours</td>
 				</tr>
 			</table>
 
 			<h4>Project Setup</h4>
 			<p>
+				Before I could even set up the project, I had to decide whether I was going to use a statically-linked library (.lib) or a dynaimcally-linked library (.dll).
+				In the end, I decided on using a statically-linked library as I figure it would be safer to use.
+				Setting up the project afterwards was not terribly difficult; create a solution in Visual Studio, add a statically-linked library project for the library,
+				then add a unit tets project for unit tests.
+			</p>
+			<p>
+				One C++ feature I wanted to look into for this project that I wasn't able to play with on any previous project is modules.
+				They were not too difficult to understand at the basic level, but I did have some trouble with module partitions, and I am still not satisfied with my current partitions.
+				My biggest issue right now is I want to have a "math" partition which will host all sorts of math functions (similar to std::sin),
+				but I am not able to import the partition for my integer type.
+				While I don't need to access these types in the math partition, as I can just use concepts, I'm not entirely sure in what partition I want to store the concept,
+				as both the number class partitions and the math partition will need to access it.
+				I have played around with different partitions, and haven't settled on one I feel fits properly, so I will continue to improve this in later weeks.
+			</p>
 
+			<h4>Basic Integer and Float</h4>
+			<p>
+				Neither of these were terribly difficult, the biggest task was ensuring I had all of the operator overloads that numeric types would use, excluding logical operators.
+				Upon doing research, I found that for binary operators that return a copy as a result (such as addition and subtraction), it is slightly more efficient when chained together
+				(such as a + b + c) for these to be friend functions that take a non-reference left-hand argument.
+				Lastly, I also wanted to ensure these classes support insertion and extraction through streams, which are additional friend functions within the class.
+			</p>
+
+			<h4>Unit Tests</h4>
+			<p>
+				Although I could have created in-depth unit tests for each of the operators and math functions, I figured it would be better to hold off for now, as I would need to
+				change them later to support significantly larger numbers and ensure that works. For now, I just have some basic unit tests to ensure that the unit tests project is
+				set up properly and can access module classes and functions.
 			</p>
 		</div>
 		<hr>
