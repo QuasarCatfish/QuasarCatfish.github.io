@@ -43,7 +43,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#week-2">Week 1</a>
+					<a href="#week-2">Week 2</a>
 					<ul>
 						<li>Arbitrary-precision integer</li>
 						<li>Unit Tests</li>
@@ -56,8 +56,8 @@
 
 		<!-- Week 2 -->
 		<div id="week-2">
-			<h3>Week 1</h3>
-			<h4>September 11 to 17</h4>
+			<h3>Week 2</h3>
+			<h4>September 18 to 24</h4>
 
 			<table>
 				<tr>
@@ -103,7 +103,7 @@
 				The most efficient way I could think to store an arbitrary-precision number is a vector of 32-bit unsigned integers, a resizable array of 32-bit words.
 				This would also allow me to take advantage of the innate 64-bit registers and arithmetic operations in interemdiate calculations (such as in addition and multiplication).
 				The primary reason for choosing this storage method is for efficiency (especially when dealing with fixed-precision numbers).
-				The alternative would be storing each digit individually (or pairs of integers), but the inefficiency in this approach would grow with the size of the number.
+				The alternative would be storing each digit individually (or pairs of integers) in an array of bytes, but the inefficiency in this approach would grow with the size of the number.
 			</p>
 			<p>
 				<b>Addition and Multiplication</b> -
