@@ -36,9 +36,104 @@
 					<a href="#week-1">Week 1</a>
 					<ul>
 						<li>Project Setup</li>
+						<li>Basic Integer</li>
+						<li>Basic Float</li>
+						<li>Unit Tests</li>
+						<li>Research</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#week-2">Week 1</a>
+					<ul>
+						<li>Arbitrary-precision integer</li>
+						<li>Unit Tests</li>
+						<li>Research</li>
 					</ul>
 				</li>
 			</ul>
+		</div>
+		<hr>
+
+		<!-- Week 2 -->
+		<div id="week-2">
+			<h3>Week 1</h3>
+			<h4>September 11 to 17</h4>
+
+			<table>
+				<tr>
+					<th>Task</th>
+					<th>Status</th>
+					<th>Time Taken</th>
+				</tr>
+				<tr>
+					<td>Arbitrary-precision integer class</td>
+					<td>In Progress</td>
+					<td>8 hours</td>
+				</tr>
+				<tr>
+					<td>Unit Tests</td>
+					<td>In Progress</td>
+					<td>2 hours</td>
+				</tr>
+				<tr>
+					<td>Research</td>
+					<td>Completed</td>
+					<td>6 hours</td>
+				</tr>
+				<tr>
+					<td>Journal Update</td>
+					<td>Completed</td>
+					<td>1 hour</td>
+				</tr>
+				<tr>
+					<td><b>Total</b></td>
+					<td></td>
+					<td>17 hours</td>
+				</tr>
+			</table>
+
+			<h4>Arbitrary-precision integer class (big_integer)</h4>
+			<p>
+				In planning this project, I thought creating such a class (in an efficient manner) would be a relatively easy task, taking no more than a week to complete.
+				This prediction was very wrong.
+				Creating an arbitrary-precision integer that uses efficient storage and supports all basic operations was a lot more difficult than I would have imagined.
+			</p>
+			<p>
+				<b>Storage</b> -
+				The most efficient way I could think to store an arbitrary-precision number is a vector of 32-bit unsigned integers, a resizable array of 32-bit words.
+				This would also allow me to take advantage of the innate 64-bit registers and arithmetic operations in interemdiate calculations (such as in addition and multiplication).
+				The primary reason for choosing this storage method is for efficiency (especially when dealing with fixed-precision numbers).
+				The alternative would be storing each digit individually (or pairs of integers), but the inefficiency in this approach would grow with the size of the number.
+			</p>
+			<p>
+				<b>Addition and Multiplication</b> -
+				Addition was fairly straight forward as it's just a single loop through the elements in each vector, with slight resizing if necessary.
+				Multiplication was significantly more difficult, however. I chose the simple approach to use the O(n<sup>2</sup>) double loop algorithm for multiplication,
+				but there were additional difficulties in managing upper and lower bits from the results of multiplying two words and ensuring this result is added in the correct
+				location of the resulting integer.
+			</p>
+			<p>
+				<b>Parsing from a string</b> -
+				The easiest way for a user to define a large number is through a string, as there is no limit to how long this can be.
+				However, there is some complexity in turning a series of base-10 digits into a series of 32-bit words.
+				My method for doing so involves splitting the string into chunks of 9-digit segments, turning that into a single 32-bit word, multiplying it by 10<sup>9i</sup>,
+				then adding it to the resulting big_integer.
+				As long as my multiplication algorithm relies on the slow O(n<sup>2</sup>) algorithm, this process will be inefficient; however, this is the most succinct method
+				I could find to complete this process.
+			</p>
+
+			<h4>Schedule Changes</h4>
+			<p>
+				I am planning on dedicating the next week, and possibly the following week, on further developing the big_integer class, as I was only able to accomplish
+				storing numbers, addition, multiplication, and parsing from a string.
+				The primary reason for this is that it was a lot more work than I previously expected.
+				In addition, I believe that having an extensive development of this class will allow the fixed-precision integer class to be significantly easier,
+				as the primary difference is the resizing and scalability; the rest of the algorithmic complexity should be nearly identical.
+			</p>
+			<p>
+				After the big_integer class is complete, I plan on working on the fixed-precision integer class for a week, as well as further fleshing out the integral math functions section.
+				Development of floating-point numbers will continue afterwards.
+			</p>
 		</div>
 		<hr>
 
